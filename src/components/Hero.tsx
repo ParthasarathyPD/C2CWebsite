@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="text-center space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              Elevate Your 
-              <span className="gradient-hero bg-clip-text text-transparent"> Teaching</span>
+              Elevate Your{" "}
+              <span className="gradient-hero bg-clip-text text-transparent">Teaching</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Professional development workshops for CS educators. Learn cutting-edge pedagogies, 
@@ -22,6 +22,9 @@ const Hero = () => {
             </Button>
             <Button variant="outline-primary" size="xl" className="w-full sm:w-auto">
               Download Brochure
+            </Button>
+            <Button variant="cta" size="xl" className="w-full sm:w-auto">
+              Book Consultation
             </Button>
           </div>
           
