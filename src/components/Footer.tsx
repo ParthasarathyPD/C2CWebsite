@@ -93,6 +93,7 @@ const Footer = () => {
             variant="secondary" 
             size="lg"
             className="bg-white text-primary hover:bg-white/90"
+            onClick={() => window.open('mailto:info@corporate2campus.com?subject=Consultation Request&body=I would like to schedule a consultation for my institution.', '_blank')}
           >
             Schedule a Consultation
           </Button>

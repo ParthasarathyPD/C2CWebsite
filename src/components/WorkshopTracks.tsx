@@ -134,7 +134,12 @@ const WorkshopTracks = () => {
                     ))}
                   </ul>
                 </div>
-                <Button variant="outline-primary" size="sm" className="w-full">
+                <Button 
+                  variant="outline-primary" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Learn More
                 </Button>
               </CardContent>

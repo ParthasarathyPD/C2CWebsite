@@ -17,13 +17,28 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Explore Workshops
             </Button>
-            <Button variant="outline-primary" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="outline-primary" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => window.open('mailto:info@corporate2campus.com?subject=Brochure Request&body=Please send me the workshop brochure.', '_blank')}
+            >
               Download Brochure
             </Button>
-            <Button variant="cta" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="cta" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Book Consultation
             </Button>
           </div>

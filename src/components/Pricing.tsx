@@ -119,6 +119,7 @@ const Pricing = () => {
                   variant={plan.popular ? "hero" : "outline-primary"} 
                   size="lg" 
                   className="w-full"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Book {plan.name}
                 </Button>
@@ -133,7 +134,11 @@ const Pricing = () => {
             Special rates for institutions sending multiple participants. Contact us for custom pricing 
             for groups of 5+ educators or institutional partnerships.
           </p>
-          <Button variant="cta" size="lg">
+          <Button 
+            variant="cta" 
+            size="lg"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Request Group Quote
           </Button>
         </div>
