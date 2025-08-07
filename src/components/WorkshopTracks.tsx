@@ -72,7 +72,7 @@ const WorkshopTracks = () => {
     };
     return colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800";
   };
-  return <section className="py-20 px-6">
+  return <section id="workshop-tracks" className="py-20 px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -90,11 +90,6 @@ const WorkshopTracks = () => {
                   <Badge className={getCategoryColor(track.category)}>
                     {track.category}
                   </Badge>
-                  <div className="flex gap-1">
-                    {track.formats.map((format, idx) => <Badge key={idx} variant="outline" className="text-xs">
-                        {format}
-                      </Badge>)}
-                  </div>
                 </div>
                 <CardTitle className="text-lg leading-tight">
                   {track.title}
@@ -110,11 +105,23 @@ const WorkshopTracks = () => {
                 <div className="space-y-2">
                   <h4 className="font-semibold text-sm">Key Highlights:</h4>
                   <ul className="text-xs space-y-1 text-muted-foreground">
-                    {track.highlights.map((highlight, idx) => <li key={idx} className="flex items-center">
+                    {track.highlights.map((highlight, idx) => (
+                      <li key={idx} className="flex items-center">
                         <span className="w-1 h-1 bg-primary rounded-full mr-2 flex-shrink-0"></span>
                         {highlight}
-                      </li>)}
+                      </li>
+                    ))}
                   </ul>
+                  <div className="mt-6">
+                    <h4 className="font-semibold text-sm mb-2">Available Formats:</h4>
+                    <div className="flex flex-wrap gap-2 w-full">
+                      {track.formats.map((format, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs rounded-md px-2 py-0.5 whitespace-nowrap">
+                          {format}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 </div>
                 
               </CardContent>

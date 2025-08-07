@@ -12,13 +12,15 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="w-full sm:w-auto" onClick={() => document.getElementById('programs')?.scrollIntoView({
+            <Button variant="hero" size="xl" className="w-full sm:w-auto" onClick={() => document.getElementById('workshop-tracks')?.scrollIntoView({
             behavior: 'smooth'
           })}>
               Explore Workshops
             </Button>
-            <Button variant="outline-primary" size="xl" className="w-full sm:w-auto" onClick={() => window.open('mailto:info@corporate2campus.com?subject=Brochure Request&body=Please send me the workshop brochure.', '_blank')}>
-              Download Brochure
+            <Button variant="outline-primary" size="xl" className="w-full sm:w-auto" asChild>
+              <a href="/FDP_Offerings_C2C.pdf" download>
+                Download Brochure
+              </a>
             </Button>
             
           </div>
