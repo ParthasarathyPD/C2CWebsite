@@ -8,7 +8,7 @@ const Hero = () => {
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Elevate Your{" "}
-              <span className="gradient-hero bg-clip-text text-transparent">Teaching</span>
+              <span className="text-primary">Teaching</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Professional development workshops for CS educators. Learn cutting-edge pedagogies, 
